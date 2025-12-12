@@ -44,6 +44,13 @@ Nenhum hardware externo é necessário além de um microfone comum.
 
 ## ⚙️ Instalação e Execução
 
+### Verificar ID do microfone
+```powershell
+python -c "import sounddevice as sd; print(sd.query_devices())"
+
+O ID que deve ser escolhido é cumpre os melhores requisitos (WASAPI (2 in, 0 out))
+"in" deve ser maior que 0
+```
 ### 1️⃣ Criar ambiente virtual
 
 ```powershell
